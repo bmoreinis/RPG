@@ -37,6 +37,12 @@ function thinkSomeMore() {
 }
 
 function enterForest() {
+    var image = document.createElement("img");
+    image.setAttribute("src", "https://www.weprepper.com/wp-content/uploads/2018/07/nature-2569214_960_720-1280x720.jpg");
+    image.setAttribute("width", "400px");
+    var storyBox = document.getElementById("storybox");
+    storyBox.style.textAlign = "center";
+    storyBox.appendChild(image);
     story("You enter the forest and soon become hopefully lost.\
     \nWhile you can't find your way out you do see a few places of interest.");
     forest();
