@@ -13,6 +13,19 @@ function start() {
   scene1();
 }
 
+function addImage(imageURL){
+  let image = document.createElement("img");
+  image.src = imageURL;
+  image.setAttribute("width", "400px");
+  var storyBox = document.getElementById("storybox");
+  if (hasImage == true) {
+      storyBox.innerHTML="";
+  }
+  storyBox.style.textAlign = "center";
+  storyBox.appendChild(image);
+  hasImage = true;
+}
+
 function setup() {
   story("Game Loading");
   options=["test 1", "test 2", "test3"];

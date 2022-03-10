@@ -3,6 +3,7 @@
 // variables
 // var name = "";
 var scene1=town;
+var hasImage = false;
 
 function checkAnswers(answer) {
   switch(answer) {
@@ -14,6 +15,18 @@ function checkAnswers(answer) {
       break;
     case "ignore it and go home":
       homeEarly();
+      break;
+    case "Knock on door":
+      houseKnock();
+      break;
+    case "Buy fruit":
+      fruitKnock();
+      break;
+    case "Enter glade":
+      gladeKnock();
+      break;
+    case "Listen":
+      knockKnockGod();
       break;
     }
 }
@@ -37,22 +50,13 @@ function thinkSomeMore() {
 }
 
 function enterForest() {
-    var image = document.createElement("img");
-    image.setAttribute("src", "https://www.weprepper.com/wp-content/uploads/2018/07/nature-2569214_960_720-1280x720.jpg");
-    image.setAttribute("width", "400px");
-    var storyBox = document.getElementById("storybox");
-    storyBox.style.textAlign = "center";
-    storyBox.appendChild(image);
-    story("You enter the forest and soon become hopefully lost.\
-    \nWhile you can't find your way out you do see a few places of interest.");
-    forest();
-}
-
-function forest() {
-  story("There is a house made of candy.\
+  addImage("https://www.weprepper.com/wp-content/uploads/2018/07/nature-2569214_960_720-1280x720.jpg");
+  story("You enter the forest and soon become hopefully lost.\
+  \nWhile you can't find your way out you do see a few places of interest.\
+  \nThere is a house made of candy.\
   \nThere is a fruit vender.\
   \nThere is a small opening in the trees with a ring of mushroom in the middle.");
-  choices = ["Think some more", "ignore it and go home"];
+  choices = ["Knock on door","Buy fruit", "Enter glade"];
   answer = setOptions(choices);
 }
 
@@ -64,4 +68,37 @@ function homeEarly() {
     "To each his own I guess."
   ];
   delayText(messages, 1000);
+}
+
+function houseKnock() {
+  addImage("https://recipes.net/wp-content/uploads/2020/10/hauntedgingerbreadhouserecipe.jpg");
+  knockKnock();
+}
+
+function fruitKnock() {
+  addImage("https://img.freepik.com/free-photo/waist-up-portrait-bearded-man-wearing-apron-smiling-while-selling-fresh-fruit-vegetable-farmers-market_236854-22932.jpg");
+  knockKnock();
+}
+
+function gladeKnock() {
+  addImage("https://cdn3.vectorstock.com/i/1000x1000/43/42/glade-in-magic-forest-vector-2474342.jpg");
+  knockKnock();
+}
+
+function knockKnock(){
+  story("You hear a loud voice that seems to come from the sky.");
+  choices = ["Listen"];
+  answer = setOptions(choices);
+}
+
+function knockKnockGod(){
+  var response = prompt("Knock knock!");
+  if (response != "Who's there?") {
+    alert("You were supposed to say \"Who\'s there?\"");
+    knockKnock();
+  }
+  else {
+    prompt("Nobel");
+    alert("No bell. That's why I knocked!");
+  }
 }
