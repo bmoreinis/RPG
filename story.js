@@ -10,10 +10,10 @@ function checkAnswers(answer) {
     case "Think some more":
       thinkSomeMore();
       break;
-    case "go into the forest":
+    case "Go into the forest":
       forest();
       break;
-    case "ignore it and go home":
+    case "Ignore it and go home":
       homeEarly();
       break;
     case "Knock on door":
@@ -45,13 +45,13 @@ function thinkSomeMore() {
   story("You think about it some more and are sure this forest was not here yesterday.  \
   \nWhere did it come from and how does it know your name?\
   \nWhat do you want to do?");
-  choices = ["go into the forest", "ignore it and go home"];
+  choices = ["Go into the forest", "Ignore it and go home"];
   answer = setOptions(choices);
 }
 
 
 function forest() {
-  ddImage("https://www.weprepper.com/wp-content/uploads/2018/07/nature-2569214_960_720-1280x720.jpg");
+  addImage("https://www.weprepper.com/wp-content/uploads/2018/07/nature-2569214_960_720-1280x720.jpg");
   story("You enter the forest and soon become hopefully lost.\
   \nWhile you can't find your way out you do see a few places of interest.\
   \nThere is a house made of candy.\
