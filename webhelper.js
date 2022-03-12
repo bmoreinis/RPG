@@ -62,3 +62,12 @@ function delayText(text, delay) {
     callback(text);
   }, delay);
 }
+
+function addImage(addURL){
+    var image = document.createElement("img");
+    image.setAttribute("src", addURL);
+    image.setAttribute("width", "400px");
+    var storyBox = document.getElementById("storybox");
+    storyBox.style.textAlign = "center";
+    storyBox.appendChild(image);
+}

@@ -11,7 +11,7 @@ function checkAnswers(answer) {
       thinkSomeMore();
       break;
     case "go into the forest":
-      enterForest();
+      forest();
       break;
     case "ignore it and go home":
       homeEarly();
@@ -49,8 +49,9 @@ function thinkSomeMore() {
   answer = setOptions(choices);
 }
 
-function enterForest() {
-  addImage("https://www.weprepper.com/wp-content/uploads/2018/07/nature-2569214_960_720-1280x720.jpg");
+
+function forest() {
+  ddImage("https://www.weprepper.com/wp-content/uploads/2018/07/nature-2569214_960_720-1280x720.jpg");
   story("You enter the forest and soon become hopefully lost.\
   \nWhile you can't find your way out you do see a few places of interest.\
   \nThere is a house made of candy.\
