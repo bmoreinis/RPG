@@ -44,3 +44,7 @@ button:hover, #choices:hover {
 button:active, #choices:active {
   background-color: mistyrose;
 }
+
+#storybox {
+  text-align:center;
+}
