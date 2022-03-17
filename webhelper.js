@@ -7,6 +7,7 @@ var dropdown = document.getElementById("choices");
 var messages = [];
 var choices;
 var answer;
+var hasImage = false;
 
 function start() {
   setup();
