@@ -3,7 +3,6 @@
 // variables
 // var name = "";
 var scene1=town;
-var hasImage = false;
 
 function checkAnswers(answer) {
   switch(answer) {
